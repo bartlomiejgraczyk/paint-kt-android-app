@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DrawActivity">
+
+    <com.example.paint.DrawView
+        android:id="@+id/drawView"
+        android:layout_width="wrap_content"
+        android:layout_height="550dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toBottomOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/colorPickerFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_color_picker"
+        app:backgroundTint="@color/purple_500"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clearFAB"
+        app:layout_constraintVertical_bias="0.25"
+        app:tint="@color/white" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginBottom="150dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/drawView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider">
+
+        <RadioButton
+            android:id="@+id/normalModeRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="24dp"
+            android:text="@string/normal_mode" />
+
+        <RadioButton
+            android:id="@+id/embossModeRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="24dp"
+            android:minHeight="24dp"
+            android:text="@string/emboss_mode" />
+
+        <RadioButton
+            android:id="@+id/blurModeRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="24dp"
+            android:minHeight="24dp"
+            android:scrollbarSize="4dp"
+            android:text="@string/blur_mode" />
+
+    </RadioGroup>
+
+    <SeekBar
+        android:id="@+id/thicknessBar"
+        android:layout_width="111dp"
+        android:layout_height="24dp"
+        android:rotation="-90"
+        android:rotationY="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <TextView
+        android:id="@+id/thicknessTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/clearFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_clear"
+        app:backgroundTint="@color/purple_700"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/colorPickerFAB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

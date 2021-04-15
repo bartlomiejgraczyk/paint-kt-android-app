@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Paint</string>
+    <string name="draw">Draw</string>
+    <string name="normal_mode">Normal</string>
+    <string name="emboss_mode">Emboss</string>
+    <string name="blur_mode">Blur</string>
+    <string name="clear">Clear</string>
+    <string name="choose_color">Choose color</string>
+    <string name="pick_color">Pick a color!</string>
+
+    <string-array name="drawing_modes">
+        <item>Normal</item>
+        <item>Emboss</item>
+        <item>Blur</item>
+    </string-array>
+</resources>
